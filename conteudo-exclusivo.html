@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Conteúdo Exclusivo - PagBank QR Code</title>
+<style>
+  body { font-family: Arial, sans-serif; padding: 20px; background: #f4f4f4; }
+  .container { max-width: 600px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; }
+  h1 { text-align: center; color: #333; }
+  #qr-code img { display: block; margin: 20px auto; max-width: 250px; }
+  #content { display: none; margin-top: 20px; }
+  button { display: block; margin: 20px auto; padding: 10px 20px; font-size: 16px; cursor: pointer; }
+  p { text-align: center; }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>Conteúdo Exclusivo - PagBank QR Code</h1>
+    <p>Para acessar o conteúdo exclusivo, você deve realizar o pagamento pelo QR Code abaixo:</p>
+    
+    <div id="qr-code">
+      <!-- QR Code oficial do Pix -->
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=00020126580014br.gov.bcb.pix0136a445b58f-2726-4028-ab42-02fc8cc5a82727600016BR.COM.PAGSEGURO01366965011C-E190-4689-A640-809DD33C864B52048999530398654045.005802BR5925FRANKLIN%20VEMESKOSKI%20ANDRE6007PALHOCA62290525PAGS0000005002508092034356304F768" alt="QR Code Pix para pagamento" />
+    </div>
+
+    <button id="btnPaid">Já realizei o pagamento</button>
+
+    <div id="content">
+      <h2>Bem-vindo ao conteúdo exclusivo!</h2>
+      <p>Aqui estão suas fotos e vídeos liberados após o pagamento.</p>
+      <!-- Aqui você pode colocar links para fotos e vídeos -->
+      <ul>
+        <li><a href="https://example.com/foto1.jpg" target="_blank">Foto 1</a></li>
+        <li><a href="https://example.com/video1.mp4" target="_blank">Vídeo 1</a></li>
+      </ul>
+    </div>
+  </div>
+
+<script>
+  const btnPaid = document.getElementById('btnPaid');
+  const content = document.getElementById('content');
+
+  btnPaid.addEventListener('click', () => {
+    // Simula a liberação após o usuário confirmar o pagamento
+    alert('Obrigado pelo pagamento! O conteúdo exclusivo será liberado.');
+    content.style.display = 'block';
+    btnPaid.style.display = 'none';
+    document.getElementById('qr-code').style.display = 'none';
+  });
+</script>
+
+</body>
+</html>
